@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Employee {
 	public static void main(String args[]) {
 		Scanner src = new Scanner(System.in);
+		
+		//Entering details of Employee
 		System.out.println("Enter Your Id");
 		int id = src.nextInt();
 		
@@ -12,7 +14,8 @@ public class Employee {
 		System.out.println("Enter Your Monthly Basic");
 		double monthlyBasic = src.nextInt();
 		
-		EmployeeTest employee = new EmployeeTest();
+		
+		EmployeeTest employee = new EmployeeTest();			//Object of Class EmployeeTest
 		
 		double annualBasic  = employee.getAnnualBasic(monthlyBasic);
 		System.out.println("Annual Basic is " +annualBasic);
