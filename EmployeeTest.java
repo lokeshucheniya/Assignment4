@@ -7,7 +7,8 @@ public class EmployeeTest {
 	static final double medicalAllowance = 1250;
 	static final double conveyanceAllowance = 800;
 	
-
+	
+	//Setting Getters and Setters
 	public int getId() {
 		return id;
 	}
@@ -62,16 +63,19 @@ public class EmployeeTest {
 		
 	}
 	
+	//Calculating Monthly Gross Salary
 	public double getMonthlyGrossSalary() {
 		double MonthlyGrossSalary = monthlyBasic + hra + medicalAllowance + conveyanceAllowance;
 		return MonthlyGrossSalary;
 	}
 	
+	//Calculating Annual Gross Salary
 	public double getAnnualGrossSalary(double MonthlyGrossSalary) {
 		double AnnualGrossSalary = MonthlyGrossSalary*12;
 		return AnnualGrossSalary;
 	}
 	
+	//Calculating Monthly Deductions
 	public double getMonthlyDeductions() {
 		double PF;
 		if((monthlyBasic/10)<6500) {
@@ -103,12 +107,12 @@ public class EmployeeTest {
 		
 		return monthlyDeduction;
 	}
-	
+	//Calculating Monthly Income
 	public double getMonthlyTakeHome(double monthlyGrossSalary, double monthlyDeduction) {
 		double monthlyTakeHome = monthlyGrossSalary - monthlyDeduction;
 		return monthlyTakeHome;
 	}
-	
+	//Calculating Annual Income
 	public double getAnnualTakeHome(double monthlyTakeHome) {
 		double annualTakeHome = monthlyTakeHome*12;
 		return annualTakeHome;
